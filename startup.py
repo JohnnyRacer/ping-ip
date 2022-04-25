@@ -7,5 +7,8 @@ argspack.add_argument('-r', '--noreload', type=bool, default=False, help='Select
 argspack.add_argument('-n','--noauth', type=bool,default=False,help='Select to disable authentication on the endpoints or not, defaults to False')
 args = argspack.parse_args()
 
-if __name__ == '__main__':
+def main():
     uvicorn.run('app.main:app', proxy_headers=True,forwarded_allow_ips='*',port=args.port ,reload= not args.noreload)
+
+if __name__ == '__main__':
+    main()

@@ -8,11 +8,9 @@
 
 # https://github.com/jazzband/pip-tools
 
-bcrypt
-fastapi
+fastapi 
 passlib
-pyjwt
 python-dotenv
-python-multipart
 uvicorn
 gunicorn
+starlette
